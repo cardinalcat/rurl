@@ -1,6 +1,6 @@
 use std::{io, io::Write, env, fs::File};
 fn main(){
-    let args = env::args().collect();
+    let args: Vec<String> = env::args().collect();
     let url = match args.get(i){
         Some(url) => url,
         None => {
