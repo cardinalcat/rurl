@@ -1,7 +1,7 @@
 use std::{io, io::Write, env, fs::File};
 fn main(){
     let args: Vec<String> = env::args().collect();
-    let url = match args.get(i){
+    let url = match args.get(1){
         Some(url) => url,
         None => {
             println!("USAGE: rurl url");
