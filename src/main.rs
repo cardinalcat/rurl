@@ -7,7 +7,7 @@ fn main(){
             println!("USAGE: rurl url");
             std::process::exit(1);
         },
-    }
+    };
     let mut file = File::open(format!("tcp:{}:80", url)).unwrap(); // example.com
     file.write(b"GET / HTTP/1.1\nHost: example.com\nConnection: close\n\n").unwrap();
 
