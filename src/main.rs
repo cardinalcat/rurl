@@ -61,7 +61,7 @@ fn main(){
     //parser.add_option("")
     let args: Vec<String> = std::env::args().skip(1).collect();
     if let Some(arg) = args.get(0){
-        if arg.contains("https://"){
+        if arg.contains("https://") || arg.contains("http://"){
             download(arg.as_str()).unwrap();
         }else{
             download(format!("{}{}", "https://", arg).as_str()).unwrap();
